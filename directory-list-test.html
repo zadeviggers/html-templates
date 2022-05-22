@@ -52,7 +52,8 @@
 			}
 			#breadcrumbs {
 				display: flex;
-				gap: 4px;
+				flex-wrap: wrap;
+				gap: 10px;
 				padding: var(--spacing);
 			}
 			#list {
@@ -147,11 +148,11 @@
 				</defs>
 			</svg>
 		</div>
-		<nav id="breadcrumbs">
+		<h1 id="breadcrumbs">
 			<a href="#dir1">root /</a><a href="#dir2">dir1 /</a
 			><a href="#dir3">dir2 /</a><span>currentdir/</span>
-		</nav>
-		<ul id="list">
+		</h1>
+		<ul id="list" tabindex="-1">
 			<li>
 				<a href="#folder"
 					><svg class="icon" viewBox="0 0 24 24">

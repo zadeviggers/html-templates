@@ -79,7 +79,8 @@ export const generateTemplate = (
 			}
 			#breadcrumbs {
 				display: flex;
-				gap: 4px;
+				flex-wrap: wrap;
+				gap: 10px;
 				padding: var(--spacing);
 			}
 			#list {
@@ -170,13 +171,13 @@ export const generateTemplate = (
 				</defs>
 			</svg>
 		</div>
-		<nav id="breadcrumbs">
+		<h1 id="breadcrumbs">
 			${breadcrumbs.map((breadcrumb) =>
 				breadcrumb.url
 					? `<span>${breadcrumb.name} /</span>`
 					: `<a href="${breadcrumb.url}">${breadcrumb.name} /</a>`
 			)}
-		</nav>
+		</h1>
 		<ul id="list">
 			${items.map((item) => {
 				let iconID = item.folder ? "folder-icon" : "file-icon";
