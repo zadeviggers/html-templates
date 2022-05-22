@@ -1,0 +1,14 @@
+{
+	"name": "zades-html-templates",
+	"version": "1.0.0",
+	"description": "Some useful HTML templates",
+	"homepage": "https://github.com/zadeviggers/html-templates/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/zadeviggers/html-templates.git"
+	},
+	"main": "index.js",
+	"types": "index.d.ts",
+	"author": "Zade Viggers (https://zade.viggers.net)",
+	"license": "SEE LICENSE IN readme.md"
+}

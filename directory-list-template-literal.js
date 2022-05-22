@@ -1,16 +1,5 @@
-interface Breadcrumb {
-	name: string;
-	url?: string;
-}
-
-interface Item {
-	folder: boolean;
-	name: string;
-	url: string;
-}
-
-const imageExtentions = ["jpg", "jpeg", "png", "gif", "bmp", "svg"];
-const videoExtentions = [
+export const imageExtentions = ["jpg", "jpeg", "png", "gif", "bmp", "svg"];
+export const videoExtentions = [
 	"mp4",
 	"avi",
 	"mkv",
@@ -20,12 +9,9 @@ const videoExtentions = [
 	"mpg",
 	"mpeg",
 ];
-const audioExtentions = ["mp3", "wav", "ogg", "flac", "aac"];
+export const audioExtentions = ["mp3", "wav", "ogg", "flac", "aac"];
 
-export const generateTemplate = (
-	breadcrumbs: Breadcrumb[],
-	items: Item[]
-) => `<!DOCTYPE html>
+export const generateDirectoryList = (breadcrumbs, items) => `<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
