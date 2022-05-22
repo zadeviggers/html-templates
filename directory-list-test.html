@@ -8,13 +8,15 @@
 		<style>
 			:root {
 				--background: white;
-				--text-light: grey;
-				--text: black;
+				--text-light: #6e6e6e;
+				--text: #313131;
+				--spacing: 20px;
 			}
 			@media screen and (prefers-color-scheme: dark) {
 				:root {
-					--background: black;
-					--text: white;
+					--background: #313131;
+					--text: #d3d3d3;
+					--light-text: white;
 				}
 			}
 			* {
@@ -33,7 +35,7 @@
 			a:hover,
 			a:focus-visible {
 				text-decoration: underline;
-				color: var(--text-light);
+				color: var(--light-text);
 			}
 			a > * {
 				color: currentColor;
@@ -50,7 +52,7 @@
 			#breadcrumbs {
 				display: flex;
 				gap: 4px;
-				padding: 8px;
+				padding: var(--spacing);
 			}
 			#list {
 				flex: 1;
@@ -59,16 +61,16 @@
 				flex-wrap: wrap;
 				overflow-x: scroll;
 				list-style-type: none;
-				gap: 6px;
-				padding-left: 8px;
+				gap: calc(var(--spacing) * 1.5);
+				padding-left: var(--spacing);
 			}
 			#list > li {
-				width: 170px;
+				width: 190px;
 			}
 			#list > li > a {
 				display: flex;
 				align-items: center;
-				gap: 4px;
+				gap: calc(var(--spacing) / 2);
 			}
 			#list > li > a > .text {
 				overflow: hidden;
@@ -81,7 +83,7 @@
 				display: inline-block;
 				width: 24px;
 				height: 24px;
-				fill: var(--background);
+				fill: transparent;
 				stroke: var(--text);
 				stroke-width: 2;
 				stroke-linecap: round;
