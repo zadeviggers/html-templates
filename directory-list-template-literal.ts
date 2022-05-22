@@ -163,10 +163,9 @@ export const generateTemplate = (
 						<line x1="17" y1="7" x2="22" y2="7"></line>
 					</g>
 					<g id="audio-icon">
-						<path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
-						<path
-							d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"
-						></path>
+						<path d="M9 18V5l12-2v13"></path>
+						<circle cx="6" cy="18" r="3"></circle>
+						<circle cx="18" cy="16" r="3"></circle>
 					</g>
 				</defs>
 			</svg>
