@@ -93,20 +93,17 @@ export const generateTemplate = (
 				gap: calc(var(--spacing) * 1.5);
 				padding-left: var(--spacing);
 			}
-			#list > li {
+			#list > a {
 				width: 190px;
-			}
-			#list > li > a {
 				display: flex;
 				align-items: center;
 				gap: calc(var(--spacing) / 2);
 			}
-			#list > li > a > .text {
+			#list > a > .text {
 				overflow: hidden;
 				white-space: nowrap;
 				text-overflow: ellipsis;
 			}
-
 			.icon {
 				flex-shrink: 0;
 				display: inline-block;
@@ -178,7 +175,7 @@ export const generateTemplate = (
 					: `<a href="${breadcrumb.url}">${breadcrumb.name} /</a>`
 			)}
 		</h1>
-		<ul id="list">
+		<main id="list">
 			${items.map((item) => {
 				let iconID = item.folder ? "folder-icon" : "file-icon";
 				if (!item.folder) {
@@ -194,17 +191,15 @@ export const generateTemplate = (
 					}
 				}
 
-				return `<li>
-			<a href="${item.url}" title="${item.name}">
-				<svg class="icon" viewBox="0 0 24 24">
-					<use xlink:href="#${iconID}"></use>
-				</svg>
-				<span class="text">
-					${item.name}
-				</span>
-			</a>
-		</li>`;
+				return `<a href="${item.url}" title="${item.name}">
+	<svg class="icon" viewBox="0 0 24 24">
+		<use xlink:href="#${iconID}"></use>
+	</svg>
+	<span class="text">
+		${item.name}
+	</span>
+</a>`;
 			})}
-		</ul>
+		</main>
 	</body>
 </html>`;
