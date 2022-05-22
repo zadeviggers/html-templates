@@ -42,7 +42,8 @@ export const generateDirectoryList = (
 				margin: 0;
 				padding: 0;
 				border: 0;
-				font-family: sans-serif;
+				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+					Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 				color: var(--text);
 			}
 			a {
