@@ -50,11 +50,23 @@
 				flex-direction: column;
 				max-height: 100vh;
 			}
-			#breadcrumbs {
+			header {
 				display: flex;
 				flex-wrap: wrap;
-				gap: 10px;
+			}
+			#breadcrumbs {
+				display: inline;
+				overflow-wrap: break-word;
 				padding: var(--spacing);
+				max-width: 80%;
+			}
+			#pagination {
+				display: flex;
+				flex-wrap: wrap;
+				gap: calc(var(--spacing) / 2);
+				padding: var(--spacing);
+				margin-left: auto;
+				font-style: italic;
 			}
 			#list {
 				flex: 1;
@@ -145,10 +157,16 @@
 				</defs>
 			</svg>
 		</div>
-		<h1 id="breadcrumbs">
-			<a href="#dir1">root /</a><a href="#dir2">dir1 /</a
-			><a href="#dir3">dir2 /</a><span>currentdir/</span>
-		</h1>
+		<header>
+			<h1 id="breadcrumbs">
+				<a href="#dir1">root / </a><a href="#dir2">dir1 / </a
+				><a href="#dir3">dir2 / </a><span>currentdir / </span>
+			</h1>
+			<nav id="pagination">
+				<a href="#load-more">Load more</a>
+				<a href="#load-all">Load all</a>
+			</nav>
+		</header>
 		<main id="list" tabindex="-1">
 			<a href="#folder"
 				><svg class="icon" viewBox="0 0 24 24">

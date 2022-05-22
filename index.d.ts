@@ -10,5 +10,9 @@ export interface DirectoryListItem {
 
 export function generateDirectoryList(
 	breadcrumbs: DirectoryListBreadcrumb[],
-	items: DirectoryListItem[]
+	items: DirectoryListItem[],
+	pagination?: {
+		loadMoreURL: string;
+		loadAllURL: string;
+	}
 ): string;
