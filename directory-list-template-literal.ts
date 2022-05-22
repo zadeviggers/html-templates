@@ -32,6 +32,7 @@ export const generateTemplate = (
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Directory listing</title>
 		<!-- Template made by Zade Viggers. https://github.com/zadeviggers/html-templates -->
+		<!-- Icons from Feather Icons. https://feathericons.com/ -->
 		<style>
 			:root {
 				--background: white;
